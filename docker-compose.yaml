@@ -24,6 +24,7 @@ services:
       - VITE_LOG_LEVEL=${VITE_LOG_LEVEL:-debug}
       - DEFAULT_NUM_CTX=${DEFAULT_NUM_CTX:-32768}
       - RUNNING_IN_DOCKER=true
+      - SERVICE_PORT=5173
     extra_hosts:
       - "host.docker.internal:host-gateway"
     command: pnpm run dockerstart
@@ -54,6 +55,7 @@ services:
       - VITE_LOG_LEVEL=${VITE_LOG_LEVEL:-debug}
       - DEFAULT_NUM_CTX=${DEFAULT_NUM_CTX:-32768}
       - RUNNING_IN_DOCKER=true
+      - SERVICE_PORT=5173
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
